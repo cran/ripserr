@@ -139,16 +139,22 @@ public:
 class Vertices
 {
 public:	
-  Coeff** vertex;
+  Coeff* vertex[8];
   int dim; 
   int ox, oy, oz;
   int type;
   
   Vertices() : dim(0)
   {
-    vertex = new Coeff*[8];
     for (int d = 0; d < 8; ++d)
       vertex[d] = new Coeff();
+  }
+  
+  // free pointers
+  ~Vertices()
+  {
+    for (int d = 0; d < 8; d++)
+      delete vertex[d];
   }
   
   void setVertices(int _dim, int _ox, int _oy, int _oz, int _om) // 0 cell
@@ -416,6 +422,12 @@ public:
   {
     vtx = new Vertices();
     nextCoface = BirthdayIndex3(0, -1, 1);
+  }
+  
+  // free pointers
+  ~SimplexCoboundaryEnumerator3()
+  {
+    delete vtx;
   }
   
   void setSimplexCoboundaryEnumerator3(BirthdayIndex3 _s, DenseCubicalGrids3* _dcg)
@@ -702,9 +714,16 @@ public:
     
     sort(dim1_simplex_list.rbegin(), dim1_simplex_list.rend(), BirthdayIndex3Comparator());
   }
+  
+  // free pointers
+  ~JointPairs3()
+  {
+    delete vtx;
+  }
+  
   void joint_pairs_main()
   {
-    cubes_edges.reserve(2);
+    cubes_edges.resize(2);
     UnionFind3 dset(ctr_moi, dcg);
     ctr -> columns_to_reduce.clear();
     ctr -> dim = 1;
@@ -715,8 +734,8 @@ public:
       cubes_edges.clear();
       dcg -> GetSimplexVertices(e.getIndex(), 1, vtx);
       
-      cubes_edges[0] = vtx -> vertex[0] -> getIndex();
-      cubes_edges[1] = vtx -> vertex[1] -> getIndex();
+      cubes_edges.push_back(vtx -> vertex[0] -> getIndex());
+      cubes_edges.push_back(vtx -> vertex[1] -> getIndex());
       
       u = dset.find(cubes_edges[0]);
       v = dset.find(cubes_edges[1]);
@@ -972,6 +991,11 @@ Rcpp::NumericMatrix cubical_3dim(Rcpp::NumericVector& image, double threshold, i
       cp -> assemble_columns_to_reduce();
       
       cp -> compute_pairs_main(); // dim2
+      
+      // free pointers
+      delete jp;
+      delete cp;
+      
       break;
     }
       
@@ -985,9 +1009,17 @@ Rcpp::NumericMatrix cubical_3dim(Rcpp::NumericVector& image, double threshold, i
       cp -> assemble_columns_to_reduce();
       
       cp -> compute_pairs_main(); // dim2
+      
+      // free pointers
+      delete cp;
+      
       break;
     }
   }
+  
+  // free pointers
+  delete dcg;
+  delete ctr;
   
   Rcpp::NumericMatrix ans(writepairs.size(), 3);
   for (int i = 0; i < ans.nrow(); i++)
