@@ -1,8 +1,8 @@
 Package: ripserr
 Title: Calculate Persistent Homology with Ripser-Based Engines
-Version: 0.3.0
+Version: 1.0.0
 Authors@R: 
-    c(person(given = "Raoul",
+    c(person(given = "Raoul R.",
              family = "Wadhwa",
              role = "aut",
              email = "raoulwadhwa@gmail.com",
@@ -11,37 +11,57 @@ Authors@R:
              family = "Piekenbrock",
              role = "aut",
              email = "matt.piekenbrock@gmail.com"),
-      person(given = "Jacob",
-             family = "Scott",
-             role = "aut",
-             comment = c(ORCID = "0000-0003-2971-7673")),
       person(given = "Jason Cory",
              family = "Brunson",
              role = c("aut", "cre"),
              email = "cornelioid@gmail.com",
              comment = c(ORCID = "0000-0003-3126-9494")),
-      person(given = "Emily",
-             family = "Noble",
-             role = "ctb"),
-      person(given = "Takeki", family = "Sudo",
-             role = c("cph", "ctb"),
-             comment = paste("Takeki Sudo is a copyright holder for Cubical",
-                             "Ripser (GPL-3 license), which was refactored",
-                             "prior to inclusion in ripserr.")),
-      person(given = "Kazushi", family = "Ahara",
-             role = c("cph", "ctb"),
-             comment = paste("Kazushi Ahara is a copyright holder for Cubical",
-                             "Ripser (GPL-3 license), which was refactored",
-                             "prior to inclusion in ripserr.")),
-      person(given = "Ulrich", family = "Bauer",
-             role = c("cph", "ctb"),
-             comment = paste("Ulrich Bauer holds the copyright to Ripser",
-                             "(MIT license), which was refactored prior",
-                             "to inclusion in ripserr.")),
       person(given = "Xinyi", 
              family = "Zhang",
              role = "aut",
-             email = "ezhang0927@gmail.com"))
+             email = "ezhang0927@gmail.com"),
+      person(given = "Alice",
+             family = "Zhang",
+             role = "aut",
+             email = "aliscezhang@gmail.com",
+             comment = c(ORCID = "0009-0001-3584-5869")),
+      person(given = "Kent",
+             family = "Phipps",
+             role = "aut"),
+      person(given = "Sean",
+             family = "Hershkowitz",
+             role = "aut",
+             email = "Sea7777.hers@gmail.com"),
+      person(given = "Emily",
+             family = "Noble",
+             role = "ctb"),
+      person(given = "Aymeric",
+             family = "Stamm",
+             role = "ctb",
+             email = "aymeric.stamm@cnrs.fr",
+             comment = c(ORCID = "0000-0002-8725-3654")),
+      person(given = "Aidan", 
+             family = "Bryant",
+             role = "ctb",
+             email = "bryant.aidan15@gmail.com"),
+      person(given = "James", 
+             family = "Golabek",
+             role = "ctb",
+             email = "jamesgolabek@gmail.com"),
+      person(given = "Jacob G.",
+             family = "Scott",
+             role = "ldr",
+             comment = c(ORCID = "0000-0003-2971-7673")),
+      person(given = "Ulrich", family = "Bauer",
+             role = c("cph", "ctb"),
+             comment = "Ripser; MIT license"),
+      person(given = "Takeki", family = "Sudo",
+             role = c("cph", "ctb"),
+             comment = "Cubical Ripser; GPL-3 license"),
+      person(given = "Kazushi", family = "Ahara",
+             role = c("cph", "ctb"),
+             comment = "Cubical Ripser; GPL-3 license")
+                            )
 Description: Ports the Ripser <doi:10.48550/arXiv.1908.02518>
     and Cubical Ripser <doi:10.48550/arXiv.2005.12692>
     persistent homology calculation engines from C++.
@@ -60,21 +80,23 @@ Suggests: covr (>= 3.5), knitr (>= 1.29), rmarkdown (>= 2.3), testthat
         (>= 2.3), lmtest
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2025-04-06 13:02:27 UTC; jasoncorybrunson
-Author: Raoul Wadhwa [aut] (<https://orcid.org/0000-0003-0503-9580>),
+Packaged: 2025-06-27 18:58:43 UTC; jasoncorybrunson
+Author: Raoul R. Wadhwa [aut] (ORCID: <https://orcid.org/0000-0003-0503-9580>),
   Matt Piekenbrock [aut],
-  Jacob Scott [aut] (<https://orcid.org/0000-0003-2971-7673>),
-  Jason Cory Brunson [aut, cre] (<https://orcid.org/0000-0003-3126-9494>),
+  Jason Cory Brunson [aut, cre] (ORCID:
+    <https://orcid.org/0000-0003-3126-9494>),
+  Xinyi Zhang [aut],
+  Alice Zhang [aut] (ORCID: <https://orcid.org/0009-0001-3584-5869>),
+  Kent Phipps [aut],
+  Sean Hershkowitz [aut],
   Emily Noble [ctb],
-  Takeki Sudo [cph, ctb] (Takeki Sudo is a copyright holder for Cubical
-    Ripser (GPL-3 license), which was refactored prior to inclusion in
-    ripserr.),
-  Kazushi Ahara [cph, ctb] (Kazushi Ahara is a copyright holder for
-    Cubical Ripser (GPL-3 license), which was refactored prior to
-    inclusion in ripserr.),
-  Ulrich Bauer [cph, ctb] (Ulrich Bauer holds the copyright to Ripser
-    (MIT license), which was refactored prior to inclusion in ripserr.),
-  Xinyi Zhang [aut]
+  Aymeric Stamm [ctb] (ORCID: <https://orcid.org/0000-0002-8725-3654>),
+  Aidan Bryant [ctb],
+  James Golabek [ctb],
+  Jacob G. Scott [ldr] (ORCID: <https://orcid.org/0000-0003-2971-7673>),
+  Ulrich Bauer [cph, ctb] (Ripser; MIT license),
+  Takeki Sudo [cph, ctb] (Cubical Ripser; GPL-3 license),
+  Kazushi Ahara [cph, ctb] (Cubical Ripser; GPL-3 license)
 Maintainer: Jason Cory Brunson <cornelioid@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-04-06 18:20:02 UTC
+Date/Publication: 2025-06-27 19:10:02 UTC

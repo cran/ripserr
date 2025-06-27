@@ -24,16 +24,22 @@ Authors:
 \itemize{
   \item Raoul Wadhwa \email{raoulwadhwa@gmail.com} (\href{https://orcid.org/0000-0003-0503-9580}{ORCID})
   \item Matt Piekenbrock \email{matt.piekenbrock@gmail.com}
-  \item Jacob Scott (\href{https://orcid.org/0000-0003-2971-7673}{ORCID})
   \item Xinyi Zhang \email{ezhang0927@gmail.com}
+  \item Alice Zhang \email{aliscezhang@gmail.com} (\href{https://orcid.org/0009-0001-3584-5869}{ORCID})
+  \item Kent Phipps
+  \item Sean Hershkowitz \email{Sea7777.hers@gmail.com}
 }
 
 Other contributors:
 \itemize{
   \item Emily Noble [contributor]
-  \item Takeki Sudo (Takeki Sudo is a copyright holder for Cubical Ripser (GPL-3 license), which was refactored prior to inclusion in ripserr.) [copyright holder, contributor]
-  \item Kazushi Ahara (Kazushi Ahara is a copyright holder for Cubical Ripser (GPL-3 license), which was refactored prior to inclusion in ripserr.) [copyright holder, contributor]
-  \item Ulrich Bauer (Ulrich Bauer holds the copyright to Ripser (MIT license), which was refactored prior to inclusion in ripserr.) [copyright holder, contributor]
+  \item Aymeric Stamm \email{aymeric.stamm@cnrs.fr} (\href{https://orcid.org/0000-0002-8725-3654}{ORCID}) [contributor]
+  \item Aidan Bryant \email{bryant.aidan15@gmail.com} [contributor]
+  \item James Golabek \email{jamesgolabek@gmail.com} [contributor]
+  \item Jacob Scott (\href{https://orcid.org/0000-0003-2971-7673}{ORCID}) [laboratory director]
+  \item Ulrich Bauer (Ripser; MIT license) [copyright holder, contributor]
+  \item Takeki Sudo (Cubical Ripser; GPL-3 license) [copyright holder, contributor]
+  \item Kazushi Ahara (Cubical Ripser; GPL-3 license) [copyright holder, contributor]
 }
 
 }

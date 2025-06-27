@@ -1,3 +1,11 @@
+# ripserr 1.0.0
+
+This major version replaces an outdated version of the Ripser C++ library with its current version.
+
+# ripserr 0.4.0
+
+This minor edition includes the `blackhole` data set along with its accompanying documentation and R script.
+
 # ripserr 0.3.0
 
 This minor version subsumes several contributions over 4+ years, including invisibly returning persistence data on `print()`, an additional vignette, and debugging & correcting of documentation.
